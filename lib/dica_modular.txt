@@ -1,0 +1,1 @@
+Lembre-se TUDO no modular é MODULO !!!! ou seja, as views vão dentro de pastas com o nome de MODULES !!!
