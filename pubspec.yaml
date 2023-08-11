@@ -1,0 +1,95 @@
+name: jobtimer
+description: A new Flutter project.
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+dependencies:
+  flutter:
+    sdk: flutter 
+  cupertino_icons: ^1.0.2
+
+  #Injeção de Dependências e Rotas dinâmicas em cada Módulo do seu projeto
+  flutter_modular: ^5.0.3
+
+  #Da dispose nas stream do bloc
+  modular_bloc_bind: ^1.0.1
+
+  #Cria dialogs personalizados (warning, sucess, error)
+  asuka: ^2.2.0
+
+  #Validações prontas pra textFormField
+  validatorless: ^1.2.3
+
+  #Criar graficos
+  fl_chart: ^0.62.0
+
+  #Core da aplicação do firebase (autenticação, banco de dados, storage, etc) |Rahman version: 1.17.1|
+  firebase_core: ^2.15.0
+
+  #Estrutura de login com firebase (google, facebook, email, etc) |Rahman version: 3.3.19|
+  firebase_auth: ^4.7.2
+  
+  #Login com google |Rahman version: 5.3.2|
+  #Para login com google ao criar o projeto no firebase e usar os comandos do flutterfire configure
+  #Clique na engrenagem do projeto e desça até achar 'Impressões digitais do certificado SHA'
+  #Nela clique no "?" e va para a pagina de ajuda, la tera um comando porém temos que ajusta ele, então ele ficara assim:
+  #No CDM: keytool -list -v -alias androiddebugkey -keystore %USERPROFILE%\.android\debug.keystore
+  #No PowerShell: keytool -list -v -alias androiddebugkey -keystore $env:USERPROFILE\.android\debug.keystore
+  #a senha que esse comando pede (geralmente é padrao) é: android
+  #Ao fazer isso pegamos o 'SHA1' e adicionamos essa impressão digital la no projeto do firebase (essa impressão fica ao clicar na ingrenagem do projeto)
+  #Após isso clicamos em 'authentication' e em 'login com google' e ativamos ele
+  google_sign_in: ^6.1.4
+  
+  #Gerenciador de estado
+  bloc: ^8.1.2
+
+  #Acesar os widgets do bloc (core)
+  flutter_bloc: ^8.1.3
+
+  #Cria o 'Equals', o bloc usa muito ele (Nao precisaria pois quando crio modelo eu ja tenho esse equal automatico)
+  equatable: ^2.0.5
+  
+  #Banco de dados |NoSql| (a versão dele é ^3.1.0+1)
+  isar: 2.5.0
+  
+  #Contem os binarios do isar
+  isar_flutter_libs: ^2.5.0
+
+  #Grava as coisas no lugar certo (sistema de pastas) ele vai analisar o OS e vai por os caminhos
+  path_provider: ^2.0.15
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+  #O isar generator depende do dev_dependencies e do build_runner pois ele tem gerador de código pra funcionar por isso ele vai aqui !!
+  isar_generator: ^2.5.0
+
+  #O build_runner tambem necessita do dev_dependencies
+  build_runner: ^2.2.0
+
+
+flutter: 
+  uses-material-design: true
+
+  assets:
+    - assets/
+  
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  
+  
+  

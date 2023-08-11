@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "920105686294",
+    "project_id": "jobtime-1c3c9",
+    "storage_bucket": "jobtime-1c3c9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:920105686294:android:57ac5154f0e13bf3c26c37",
+        "android_client_info": {
+          "package_name": "br.com.vitu.jobtimer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "920105686294-ftrd36vj7547ah4mi3eb1f1rfodgqb10.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuxyraMDRLpwipt74lcK_qJOC6SE8MHSU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "920105686294-ftrd36vj7547ah4mi3eb1f1rfodgqb10.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
