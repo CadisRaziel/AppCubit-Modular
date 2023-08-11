@@ -1,12 +1,14 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:jobtimer/firebase_options.dart';
 
 void main() async {
 
-  // //*Para rodar o flutter antes de iniciar o projeto
-  // WidgetsFlutterBinding.ensureInitialized();
+  //*Para rodar o flutter antes de iniciar o projeto
+  WidgetsFlutterBinding.ensureInitialized();
 
-  // //*Inicialização do firebase
-  // await Firebase.initializeApp();
+  //*Inicialização do firebase
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform,);
   runApp(const MyApp());
 }
 
