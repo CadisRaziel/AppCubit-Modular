@@ -79,10 +79,11 @@ flutter:
   assets:
     - assets/
   
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+  #JobTimerIcons -> mesmo nome que utlizamos no site do fluttericon
+    - family: JobTimerIcons
+      fonts:
+        - asset: assets/fonts/JobTimerIcons.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

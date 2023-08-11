@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jobtimer/app/modules/core/ui/job_timer_icons.dart';
 
 class SplashPage extends StatelessWidget {
 
@@ -8,7 +9,9 @@ class SplashPage extends StatelessWidget {
    Widget build(BuildContext context) {
        return Scaffold(
            appBar: AppBar(title: const Text('Splash'),),
-           body: Container(),
+           body: Center(child: Container(
+            child: Icon(JobTimerIcons.angle_double_right),
+           )),
        );
   }
 }
