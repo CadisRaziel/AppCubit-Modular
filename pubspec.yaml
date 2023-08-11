@@ -77,7 +77,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/
+    - assets/images/
   
   fonts:
   #JobTimerIcons -> mesmo nome que utlizamos no site do fluttericon
