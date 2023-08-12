@@ -1,0 +1,2 @@
+vamos criar uma classe para abrir e fechar as conexões com o banco de dados isar !!
+poderiamos ter usado sqfliter (o que é até mais recomendado)

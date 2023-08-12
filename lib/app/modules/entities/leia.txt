@@ -1,0 +1,2 @@
+aqui tera uma entidade igual de um banco de dados como eu faço no java
+pois vamos utilizar o isar que é um database local
