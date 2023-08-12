@@ -25,8 +25,7 @@ class LoginPage extends StatelessWidget {
                 width: MediaQuery.of(context).size.width * 0.4,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey[200],
-                    
+                    backgroundColor: Colors.grey[200],                    
                   ),
                   onPressed: () {},
                   child: Image.asset("assets/images/google.png"),
