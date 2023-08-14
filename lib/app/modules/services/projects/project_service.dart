@@ -1,7 +1,9 @@
+import 'package:jobtimer/app/modules/entities/project_status.dart';
 import 'package:jobtimer/app/modules/view_models/project_view_model.dart';
 
 abstract class ProjectService {
   Future<void> register(ProjectViewModel projectModel); //Aqui passamos o mesmo que seria um DTO no java !!
+  Future<List<ProjectViewModel>> findByStatus(ProjectStatus status);
 }
 
 

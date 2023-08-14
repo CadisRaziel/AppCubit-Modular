@@ -19,7 +19,7 @@ class Project {
 
   //*IsarLink -> OneToMany
   //*Um projeto pode ter varias tasks
-  final tasks = IsarLink<ProjectTask>();
+  final tasks = IsarLinks<ProjectTask>();
 }
 
 
