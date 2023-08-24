@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:jobtimer/app/modules/core/ui/button_with_loader.dart';
 import 'package:validatorless/validatorless.dart';
 import 'package:asuka/snackbars/asuka_snack_bar.dart';
 
@@ -32,14 +33,14 @@ class _ProjectRegisterPageState extends State<ProjectRegisterPage> {
   @override
   Widget build(BuildContext context) {
     return BlocListener<ProjectRegisterController, ProjectRegisterStatus>(
-      bloc: widget.controller,
+        bloc: widget.controller,
         listener: (context, state) {
           switch (state) {
             case ProjectRegisterStatus.success:
               Navigator.pop(context);
               break;
             case ProjectRegisterStatus.failure:
-            AsukaSnackbar.alert("Erro ao salvar o projeto").show();
+              AsukaSnackbar.alert("Erro ao salvar o projeto").show();
               break;
             default:
               break;
@@ -86,25 +87,31 @@ class _ProjectRegisterPageState extends State<ProjectRegisterPage> {
                   const SizedBox(
                     height: 10,
                   ),
-                  BlocSelector<ProjectRegisterController, ProjectRegisterStatus,
-                      bool>(
-                    bloc: widget.controller,
-                    selector: (state) {
-                      return state == ProjectRegisterStatus.loading;
-                    },
-                    builder: (context, showLoading) {
-                      return Visibility(
-                        visible: showLoading,
-                        child: const Center(
-                          child: CircularProgressIndicator(),
-                        ),
-                      );
-                    },
-                  ),
+                  // BlocSelector<ProjectRegisterController, ProjectRegisterStatus,
+                  //     bool>(
+                  //   bloc: widget.controller,
+                  //   selector: (state) {
+                  //     return state == ProjectRegisterStatus.loading;
+                  //   },
+                  //   builder: (context, showLoading) {
+                  //     return Visibility(
+                  //       visible: showLoading,
+                  //       child: const Center(
+                  //         child: CircularProgressIndicator(),
+                  //       ),
+                  //     );
+                  //   },
+                  // ),
+                  ///O botão abaixo \/ ja esta fazendo a função do selector de cima /\ 
                   SizedBox(
                     width: MediaQuery.of(context).size.width * .5,
                     height: 49,
-                    child: ElevatedButton(
+                    child: ButtonWithLoader<ProjectRegisterController,
+                        ProjectRegisterStatus>(
+                      bloc: widget.controller,
+                      selector: (state) {
+                        return state == ProjectRegisterStatus.loading;
+                      },
                       onPressed: () async {
                         final formValid =
                             _formKey.currentState?.validate() ?? false;
@@ -114,7 +121,7 @@ class _ProjectRegisterPageState extends State<ProjectRegisterPage> {
                           await widget.controller.register(name, estimate);
                         }
                       },
-                      child: const Text("Salvar"),
+                      label: "Salvar",
                     ),
                   ),
                 ],

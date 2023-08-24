@@ -26,4 +26,10 @@ class HomeController extends Cubit<HomeState> {
       emit(state.copyWith(status: HomeStatus.failure));
     }
   }
+
+  Future<void> filterDropDown(ProjectStatus status) async {
+    emit(state.copyWith(status: HomeStatus.loading, projects: [])); // projects: [] -> para limpar os projetos de um determinado status para mostrar outra lista de outro status
+    final projects = await _projectService.findByStatus(status);
+    emit(state.copyWith(status: HomeStatus.complete, projects: projects, projectStatusFilter: status));
+  }
 }
